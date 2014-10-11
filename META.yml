@@ -26,7 +26,7 @@ no_index:
 provides:
   Tree::BK:
     file: lib/Tree/BK.pm
-    version: '0.01'
+    version: '0.02'
 requires:
   Carp: '0'
   Text::Levenshtein::XS: '0'
@@ -35,10 +35,10 @@ requires:
   warnings: '0'
 resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=Tree-BK
-  homepage: https://github.com/garfieldnate/Tree-BK
+  homepage: https://github.com/garfieldnate/p5-Tree-BK
   license: http://dev.perl.org/licenses/
-  repository: https://github.com/garfieldnate/Tree-BK.git
-version: '0.01'
+  repository: https://github.com/garfieldnate/p5-Tree-BK.git
+version: '0.02'
 x_BuiltWith:
   failures:
     Dist::Zilla::Plugin::ReportPhase: 'Module::MetaData could not parse a version from C:\Strawberry\perl\site\lib\Dist\Zilla\Plugin\ReportPhase.pm'
@@ -122,7 +122,7 @@ x_BuiltWith:
     Test::Pod: '1.48'
     Test::Pod::Coverage: '1.10'
     Test::Synopsis: '0.10'
-    Text::Levenshtein::XS: '0.3'
+    Text::Levenshtein::XS: '0.40'
     strict: '1.08'
     version: '0.9909'
     warnings: '1.23'
@@ -541,7 +541,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: ~
           signed: '0'
-          tag: v0.01
+          tag: v0.02
           tag_format: v%v
           tag_message: 'Tagged release %v'
           time_zone: local

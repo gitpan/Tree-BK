@@ -7,7 +7,7 @@
 # the same terms as the Perl 5 programming language system itself.
 #
 package Tree::BK;
-$Tree::BK::VERSION = '0.01';
+$Tree::BK::VERSION = '0.02';
 use strict;
 use warnings;
 use Text::Levenshtein::XS qw(distance);
@@ -101,6 +101,7 @@ sub size {
 	return $self->{size};
 }
 
+
 1;
 
 __END__
@@ -115,7 +116,7 @@ Tree::BK - Structure for efficient fuzzy matching
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
@@ -137,6 +138,8 @@ more generally usable.
 =head1 METHODS
 
 =head2 C<new>
+
+ Tree::BK->new(\&metric);
 
 Creates a new instance of Tree::BK. A metric may be provided as an
 argument. It should be a subroutine which takes two tree members
@@ -166,6 +169,22 @@ which are at most C<$distance> distance away from C<$target>.
 =head2 C<size>
 
 Returns the number of objects currently stored in the tree.
+
+=head1 SEE ALSO
+
+These sites explain the concept of a BK tree pretty well:
+
+=over
+
+=item
+
+L<http://nullwords.wordpress.com/2013/03/13/the-bk-tree-a-data-structure-for-spell-checking/>
+
+=item
+
+L<http://blog.notdot.net/2007/4/Damn-Cool-Algorithms-Part-1-BK-Trees>
+
+=back
 
 =head1 AUTHOR
 

@@ -2,7 +2,7 @@ NAME
     Tree::BK - Structure for efficient fuzzy matching
 
 VERSION
-    version 0.01
+    version 0.02
 
 SYNOPSIS
             use Tree::BK;
@@ -20,6 +20,8 @@ DESCRIPTION
 
 METHODS
   "new"
+     Tree::BK->new(\&metric);
+
     Creates a new instance of Tree::BK. A metric may be provided as an
     argument. It should be a subroutine which takes two tree members as
     arguments and returns a positive integer indicating the distance between
@@ -43,6 +45,14 @@ METHODS
 
   "size"
     Returns the number of objects currently stored in the tree.
+
+SEE ALSO
+    These sites explain the concept of a BK tree pretty well:
+
+    *   <http://nullwords.wordpress.com/2013/03/13/the-bk-tree-a-data-struct
+        ure-for-spell-checking/>
+
+    *   <http://blog.notdot.net/2007/4/Damn-Cool-Algorithms-Part-1-BK-Trees>
 
 AUTHOR
     Nathan Glenn <nglenn@cpan.org>
